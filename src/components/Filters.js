@@ -9,7 +9,7 @@ const Filters = props => {
     return (
         <div className="app__search_containter">
             <label className="app__search-label" htmlFor="inputSearch">introduce tu búsqueda</label>
-            <input className="app__search" type="text" value={props.search} onChange={handleChange} placeholder="rick"></input>
+            <input className="app__search" type="text" value={props.search} onChange={handleChange} placeholder="Ric"></input>
         </div>
     );
 }

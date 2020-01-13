@@ -14,7 +14,6 @@ const CharacterCard = props => {
                 <h2 className="card__title">{name}</h2>
                 <p className="card__species">{species}</p>
             </div>
-
         </div>
     );
 

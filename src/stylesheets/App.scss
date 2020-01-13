@@ -1,0 +1,26 @@
+.App {
+    text-decoration: none;  
+    background-color:black;  
+  }
+  
+  
+  .App__header {    
+    display: flex;
+    justify-content: center;
+    background-color:black;
+    @media all and (min-width: 768px) {
+      min-height:20vh;
+   }
+   }
+   .App__title {
+     width: 250px;
+     height: 1px;
+     padding-top: 75px;
+     overflow: hidden;
+     background-image: url('https://help.redbubble.com/hc/article_attachments/360002309526/Rick_and_Morty_-_logo__English_.png');
+     background-size: cover;  
+     @media all and (min-width: 768px) {
+      width: 420px;
+      padding-top: 135px;
+   }
+   }

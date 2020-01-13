@@ -3,8 +3,9 @@ import '../stylesheets/App.scss';
 import { Switch, Route } from 'react-router-dom';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
-//import CharacterDetail from './CharacterDetail';
+import CharacterDetail from './CharacterDetail';
 import { fetchCharacters } from '../services/fetchCharacters';
+
 
 
 class App extends React.Component {
@@ -14,7 +15,7 @@ class App extends React.Component {
       api: [],
       search: ''
     }
-    //this.handleChange = this.handleChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
 
   }
 
@@ -33,7 +34,6 @@ class App extends React.Component {
     })
   }
 
-
   render() {
     return (
       <div className="App">
@@ -42,14 +42,27 @@ class App extends React.Component {
             <h1 className="App__title">Rick and Morty Searcher</h1>
           </div>
         </header>
-        <Filters
-          search={this.props.search}
-          handleChange={this.handleChange}
-        />
-        <CharacterList
-          api={this.state.api}
-          search={this.state.search}
-        />
+        <Switch>
+          <Route exact path="/" >
+            <Filters
+              handleChange={this.handleChange}
+            />
+            <CharacterList
+              api={this.state.api}
+              search={this.state.search}
+            />
+            />
+          </Route>
+          <Route path="/character-detail/:characterId" render={routerProps => {
+            return (
+              <CharacterDetail
+                routerProps={routerProps}
+                api={this.state.api}
+              />
+            );
+          }} />
+          />
+        </Switch>
       </div>
     );
   }
