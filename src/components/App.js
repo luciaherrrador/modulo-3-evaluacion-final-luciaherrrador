@@ -1,7 +1,9 @@
 import React from 'react';
 import '../stylesheets/App.scss';
 import { Switch, Route } from 'react-router-dom';
-
+import Filters from './Filters';
+import CharacterList from './CharacterList';
+//import CharacterDetail from './CharacterDetail';
 import { fetchCharacters } from '../services/fetchCharacters';
 
 
@@ -9,7 +11,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      api: [],
+      search: ''
     }
     //this.handleChange = this.handleChange.bind(this);
 
@@ -39,7 +42,14 @@ class App extends React.Component {
             <h1 className="App__title">Rick and Morty Searcher</h1>
           </div>
         </header>
-
+        <Filters
+          search={this.props.search}
+          handleChange={this.handleChange}
+        />
+        <CharacterList
+          api={this.state.api}
+          search={this.state.search}
+        />
       </div>
     );
   }
