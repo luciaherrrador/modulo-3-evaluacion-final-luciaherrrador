@@ -19,7 +19,7 @@ Ahora que ya tenemos el listado de personajes en pantalla, la segunda parte cons
 
 3. Componentes del listado de personajes:
 
-El listado debe tener los siguientes componentes como mínimo:
+El listado tiene los siguientes componentes:
 
 
 -Componente para los filtros
