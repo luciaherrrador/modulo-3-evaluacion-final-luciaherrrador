@@ -7,7 +7,6 @@ import CharacterDetail from './CharacterDetail';
 import { fetchCharacters } from '../services/fetchCharacters';
 
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);
