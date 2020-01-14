@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//import '../stylesheets/Filters.scss';
+import '../stylesheets/Filters.scss';
 
 const Filters = props => {
     const handleChange = evt => {
@@ -8,7 +8,7 @@ const Filters = props => {
     }
     return (
         <div className="app__search_containter">
-            <label className="app__search-label" htmlFor="inputSearch">introduce tu búsqueda</label>
+            <label className="app__search-label" htmlFor="inputSearch">Busca un personaje</label>
             <input className="app__search" type="text" value={props.search} onChange={handleChange} placeholder="Ric"></input>
         </div>
     );

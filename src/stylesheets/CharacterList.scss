@@ -1,0 +1,22 @@
+.app__list{
+    min-height: 70vh;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style:none;
+    margin:0;   
+    padding:0;
+      
+}
+
+.app__character{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    margin:15px;
+}
+
+.character__link{
+    text-decoration: none;
+}
