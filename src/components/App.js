@@ -45,6 +45,7 @@ class App extends React.Component {
           <Route exact path="/" >
             <Filters
               handleChange={this.handleChange}
+              search={this.state.search}
             />
             <CharacterList
               api={this.state.api}
