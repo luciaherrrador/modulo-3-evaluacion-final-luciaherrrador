@@ -51,7 +51,6 @@ class App extends React.Component {
               api={this.state.api}
               search={this.state.search}
             />
-            />
           </Route>
           <Route path="/character-detail/:characterId" render={routerProps => {
             return (

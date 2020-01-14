@@ -21,7 +21,6 @@ const CharacterList = props => {
                     </li>
                 )}
         </ul>);
-
 }
 
 CharacterList.propTypes = {

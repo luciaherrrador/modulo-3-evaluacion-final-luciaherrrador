@@ -16,7 +16,6 @@ const CharacterCard = props => {
             </div>
         </div>
     );
-
 }
 
 CharacterCard.propTypes = {
